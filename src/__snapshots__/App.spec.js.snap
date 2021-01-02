@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic App Snapshot snapshot renders 1`] = `
+<div>
+  Convo App
+</div>
+`;
