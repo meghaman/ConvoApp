@@ -7,7 +7,7 @@ export const initialState = {
 
 const conversationSlice = createSlice({
     name: 'conversationState',
-    initialState: initialState,
+    initialState,
     reducers: {
         addPerson: (state, { payload }) => {
             state.people.push(payload);

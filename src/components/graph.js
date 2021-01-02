@@ -7,9 +7,9 @@ const Graph = () => {
     const { people } = useSelector(getConversation);
 
     return(
-        people.map((person) => {
+        people.map((person, i) => {
             return(
-                <div>
+                <div key={i}>
                     <span>Name: {person.name}</span>, &nbsp;<span>Time Spoken: {person.timeSpoken}s</span>
                 </div>
             )
