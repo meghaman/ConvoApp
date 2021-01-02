@@ -1,13 +1,15 @@
 import React from 'react';
 
 import Graph from '@Components/graph'
+import AddPersonButton from '@Components/addPersonButton'
  
-const App = ({ title }) =>
+const App = () =>
 {
   return(
     <div>
-        {title}
         <Graph></Graph>
+        <br />
+        <AddPersonButton></AddPersonButton>
     </div>
   )
 };

@@ -6,15 +6,13 @@ import { Provider } from 'react-redux';
 import App from './App';
 import rootReducer from '@Slices/index';
 
-const title = 'Convo App';
-
 const store = configureStore({
     reducer: rootReducer
 })
  
 ReactDOM.render(
     <Provider store={store}>
-        <App title={title} />
+        <App />
     </Provider>,
     document.getElementById('app')
 );
