@@ -3,29 +3,5 @@
 exports[`Basic App Snapshot snapshot renders 1`] = `
 <div>
   Convo App
-  <div>
-    <span>
-      Name: 
-      John
-    </span>
-    ,  
-    <span>
-      Time Spoken: 
-      3000
-      s
-    </span>
-  </div>
-  <div>
-    <span>
-      Name: 
-      Steve
-    </span>
-    ,  
-    <span>
-      Time Spoken: 
-      2000
-      s
-    </span>
-  </div>
 </div>
 `;

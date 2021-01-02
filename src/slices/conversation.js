@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
-    people: [ { name: "John", timeSpoken: 3000 }, { name: "Steve", timeSpoken: 2000 } ],
+    people: [],
     conversationTime: 0
 };
 
