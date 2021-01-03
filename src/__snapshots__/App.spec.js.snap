@@ -2,6 +2,21 @@
 
 exports[`Basic App Snapshot snapshot renders 1`] = `
 <div>
-  Convo App
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Add Person
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Start Conversation
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Stop Conversation
+  </button>
 </div>
 `;

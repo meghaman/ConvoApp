@@ -3,6 +3,7 @@
     "moduleNameMapper": {
         "^@Components(.*)$": "<rootDir>/src/components$1",
         "^@Slices(.*)$": "<rootDir>/src/slices$1",
-        "^@Selectors(.*)$": "<rootDir>/src/selectors$1"
+        "^@Selectors(.*)$": "<rootDir>/src/selectors$1",
+        "^@Sagas(.*)$": "<rootDir>/src/sagas$1"
     }
 }

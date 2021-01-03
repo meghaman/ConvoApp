@@ -1,6 +1,8 @@
 import reducer, { 
     initialState,
-    addPerson
+    addPerson,
+    startConversation,
+    stopConversation
 } from '@Slices/conversation';
 
 describe('Conversation slice', () => {
@@ -21,4 +23,20 @@ describe('Conversation slice', () => {
 
         expect(result).toEqual(nextState);
     });
+
+    test('Start Conversation', () => {
+        const nextState = { ...initialState, activeConversation: true };
+        const action = startConversation;
+        const result = reducer(undefined, action);
+
+        expect(result).toEqual(nextState);
+    })
+
+    test('Stop Conversation', () => {
+        const nextState = { ...initialState, activeConversation: false };
+        const action = stopConversation;
+        const result = reducer(undefined, action);
+
+        expect(result).toEqual(nextState);
+    })
 });

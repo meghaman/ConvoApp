@@ -6,10 +6,10 @@ import Button from '@Components/baseComponents/button'
 
 const AddPersonButton = () => {
     const dispatch = useDispatch();
-    const _addPerson = () => dispatch(addPerson({ name: "John", timeSpoken: 0 }));
+    const handler = () => dispatch(addPerson({ name: "John", timeSpoken: 0 }));
 
     return(
-        <Button text="Add Person" handler={_addPerson}></Button>
+        <Button text="Add Person" handler={handler}></Button>
     );
 }
 

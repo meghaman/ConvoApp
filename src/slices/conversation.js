@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
     people: [],
-    conversationTime: 0
+    conversationTime: 0,
+    activeConversation: false
 };
 
 const conversationSlice = createSlice({
@@ -11,12 +12,25 @@ const conversationSlice = createSlice({
     reducers: {
         addPerson: (state, { payload }) => {
             state.people.push(payload);
+        },
+        startConversation: (state) => {
+            state.activeConversation = true;
+        },
+        stopConversation: (state) => {
+            state.activeConversation = false;
+        },
+        updateSpeakingTime: (state) => {
+            state.conversationTime += 500;
+            console.log("Conversation Time: " + state.conversationTime)
         }
     }
 });
 
 export const {
-    addPerson
+    addPerson,
+    startConversation,
+    updateSpeakingTime,
+    stopConversation
 } = conversationSlice.actions;
 
 export default conversationSlice.reducer;
