@@ -21,7 +21,13 @@ const conversationSlice = createSlice({
         },
         updateSpeakingTime: (state) => {
             state.conversationTime += 500;
-            console.log("Conversation Time: " + state.conversationTime)
+            state = { ...state, people: state.people.map((person) => {
+                if(person.isTalking)
+                    return { ...person, timeSpoken: person.timeSpoken += 500 };
+
+                return { ...person };
+            })}
+            console.log(state);
         }
     }
 });
