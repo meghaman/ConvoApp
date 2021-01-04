@@ -11,6 +11,7 @@ const conversationSlice = createSlice({
     initialState,
     reducers: {
         addPerson: (state, { payload }) => {
+            payload.id = state.people.length;
             state.people.push(payload);
         },
         startConversation: (state) => {
@@ -30,7 +31,7 @@ const conversationSlice = createSlice({
         },
         toggleTalking: (state, { payload }) => {
             state = { ...state, people: state.people.map((person) => {
-                if(person.name == payload.person.name)
+                if(person.id == payload.person.id)
                     person.isTalking = !person.isTalking;
 
                 return person;
