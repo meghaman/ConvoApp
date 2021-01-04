@@ -6,15 +6,7 @@ import { getConversation } from '@Selectors/index';
 const Graph = () => {
     const { people } = useSelector(getConversation);
 
-    return(
-        people.map((person, i) => {
-            return(
-                <div key={i}>
-                    <span>Name: {person.name}</span>, &nbsp;<span>Time Spoken: {person.timeSpoken}s</span>
-                </div>
-            )
-        })
-    )
+    return(<div>Graph Goes Here</div>)
 };
 
 export default Graph;

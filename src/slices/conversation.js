@@ -23,11 +23,18 @@ const conversationSlice = createSlice({
             state.conversationTime += 500;
             state = { ...state, people: state.people.map((person) => {
                 if(person.isTalking)
-                    return { ...person, timeSpoken: person.timeSpoken += 500 };
+                    person.timeSpoken += 500
 
-                return { ...person };
+                return person;
             })}
-            console.log(state);
+        },
+        toggleTalking: (state, { payload }) => {
+            state = { ...state, people: state.people.map((person) => {
+                if(person.name == payload.person.name)
+                    person.isTalking = !person.isTalking;
+
+                return person;
+            })}
         }
     }
 });
@@ -36,7 +43,8 @@ export const {
     addPerson,
     startConversation,
     updateSpeakingTime,
-    stopConversation
+    stopConversation,
+    toggleTalking
 } = conversationSlice.actions;
 
 export default conversationSlice.reducer;
