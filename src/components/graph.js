@@ -7,8 +7,10 @@ import { getConversation } from '@Selectors/index';
 const Graph = () => {
     const { people } = useSelector(getConversation);
 
+    let discussionTime = people.reduce((accumulator, person) => { return parseInt(accumulator + parseInt(person.timeSpoken)) }, [] );
+
     let props = { data : people.map((person) => {
-        return { name: person.name, value: person.timeSpoken };
+        return { name: person.name, value: person.timeSpoken, percentage: Math.floor((person.timeSpoken / discussionTime) * 100)};
     })};
 
     const ref = useRef(null);
@@ -51,7 +53,7 @@ const Graph = () => {
           .attr("transform", d => `translate(${createArc.centroid(d)})`)
           .style("fill", "white")
           .style("font-size", 18)
-          .text(d => { return d.data.name });
+          .text(d => { return d.data.name + " " + d.data.percentage + "%" });
       },
       [props.data]
     );

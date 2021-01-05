@@ -21,10 +21,10 @@ const conversationSlice = createSlice({
             state.activeConversation = false;
         },
         updateSpeakingTime: (state) => {
-            state.conversationTime += 500;
+            state.conversationTime += 10;
             state = { ...state, people: state.people.map((person) => {
                 if(person.isTalking)
-                    person.timeSpoken += 500
+                    person.timeSpoken += 10
 
                 return person;
             })}
