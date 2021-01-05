@@ -23,7 +23,6 @@ const PersonRow = ({ person }) => {
                     <Fragment>{person.name}</Fragment>
                 )}
             </span>, &nbsp;
-            <span>Time Spoken: {person.timeSpoken}ms</span>, &nbsp;
             <span>Is Talking: {person.isTalking ? "Yes" : "No"}</span>, &nbsp;
             <span><ToggleTalkingButton person={person}></ToggleTalkingButton></span>
             <span>

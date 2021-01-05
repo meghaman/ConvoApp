@@ -4,7 +4,7 @@ import { select } from 'redux-saga/effects';
 import { startConversation, updateSpeakingTime } from '@Slices/conversation';
 import { getConversation } from '@Selectors/index';
 
-const UPDATE_TIME = 500;
+const UPDATE_TIME = 10;
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
 function* timeTick() {
