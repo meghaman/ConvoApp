@@ -2,6 +2,9 @@
 
 exports[`Basic App Snapshot snapshot renders 1`] = `
 <div>
+  <div>
+    Graph Goes Here
+  </div>
   <br />
   <button
     onClick={[Function]}
@@ -18,5 +21,6 @@ exports[`Basic App Snapshot snapshot renders 1`] = `
   >
     Stop Conversation
   </button>
+  <div />
 </div>
 `;

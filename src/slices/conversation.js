@@ -36,6 +36,14 @@ const conversationSlice = createSlice({
 
                 return person;
             })}
+        },
+        editPerson: (state, { payload }) => {
+            state = { ...state, people: state.people.map((person) => {
+                if(person.id == payload.id)
+                    person.name = payload.name;
+
+                return person;
+            })}
         }
     }
 });
@@ -45,7 +53,8 @@ export const {
     startConversation,
     updateSpeakingTime,
     stopConversation,
-    toggleTalking
+    toggleTalking,
+    editPerson
 } = conversationSlice.actions;
 
 export default conversationSlice.reducer;

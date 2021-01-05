@@ -6,7 +6,7 @@ import { toggleTalking } from '@Slices/conversation';
 
 const ToggleTalkingButton = (person) => {
     const dispatch = useDispatch();
-        const handler = () => dispatch(toggleTalking(person));
+    const handler = () => dispatch(toggleTalking(person));
 
     return(
         <Button text="Toggle Talking" handler={handler}></Button>
