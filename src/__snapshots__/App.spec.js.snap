@@ -2,9 +2,14 @@
 
 exports[`Basic App Snapshot snapshot renders 1`] = `
 <div>
-  <div>
-    Graph Goes Here
-  </div>
+  <svg
+    height={500}
+    width={500}
+  >
+    <g
+      transform="translate(250 250)"
+    />
+  </svg>
   <br />
   <button
     onClick={[Function]}

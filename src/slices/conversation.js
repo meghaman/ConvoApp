@@ -31,7 +31,7 @@ const conversationSlice = createSlice({
         },
         toggleTalking: (state, { payload }) => {
             state = { ...state, people: state.people.map((person) => {
-                if(person.id == payload.person.id)
+                if(person.id == payload.id)
                     person.isTalking = !person.isTalking;
 
                 return person;

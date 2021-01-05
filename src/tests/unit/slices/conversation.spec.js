@@ -3,6 +3,7 @@ import reducer, {
     addPerson,
     startConversation,
     stopConversation,
+    toggleTalking,
     editPerson
 } from '@Slices/conversation';
 
@@ -37,6 +38,22 @@ describe('Conversation slice', () => {
         const nextState = { ...initialState, activeConversation: false };
         const action = stopConversation;
         const result = reducer(undefined, action);
+
+        expect(result).toEqual(nextState);
+    })
+
+    test('Toggle Talking', () => {
+        const notTalkingPerson = { name: "John", timeSpoken: 0, isTalking: false, id: 0 };
+        const talkingPerson = { name: "John", timeSpoken: 0, isTalking: true, id: 0 };
+        const nextState = { ...initialState, people: [talkingPerson] };
+
+        const initialStateAfterToggle = {
+            ...initialState,
+            people: [notTalkingPerson]
+        }
+
+        const action = toggleTalking(talkingPerson);
+        const result = reducer(initialStateAfterToggle, action);
 
         expect(result).toEqual(nextState);
     })
